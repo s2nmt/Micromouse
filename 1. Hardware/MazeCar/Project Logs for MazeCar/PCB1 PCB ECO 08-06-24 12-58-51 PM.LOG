@@ -1,0 +1,43 @@
+Removed Pin From Net: NetName=GND Pin=AMS1-1
+Removed Pin From Net: NetName=GND Pin=AMS1-1
+Removed Pin From Net: NetName=PGND Pin=mini1-1
+Removed Pin From Net: NetName=PGND Pin=mini1-1
+Removed Pin From Net: NetName=PGND Pin=mini1-1
+Removed Pin From Net: NetName=PGND Pin=mini1-1
+Removed Pin From Net: NetName=PGND Pin=mini1-2
+Removed Pin From Net: NetName=PGND Pin=mini1-2
+Removed Pin From Net: NetName=PGND Pin=mini1-2
+Removed Pin From Net: NetName=PGND Pin=mini1-2
+Removed Member From Class: ClassName=Sheet1 Member=AMS1
+Added Component: Designator=AMS1117-3.3(ASM1117-3.3)
+Added Pin To Net: NetName=SDA Pin=*1-5
+Added Pin To Net: NetName=SCL Pin=*1-6
+Added Pin To Net: NetName=GND Pin=*1-7
+Added Pin To Net: NetName=VCC Pin=*1-8
+Add Pin To Net: Unknown Pin: Pin AMS1117-3.3-3
+Add Pin To Net: Unknown Pin: Pin AMS1117-3.3-4
+Add Pin To Net: Unknown Pin: Pin TB1-9
+Add Pin To Net: Unknown Pin: Pin TB1-10
+Add Pin To Net: Unknown Pin: Pin TB1-11
+Add Pin To Net: Unknown Pin: Pin TB1-12
+Add Pin To Net: Unknown Pin: Pin TB1-13
+Add Pin To Net: Unknown Pin: Pin TB1-14
+Add Pin To Net: Unknown Pin: Pin TB1-15
+Add Pin To Net: Unknown Pin: Pin TB1-16
+Added Pin To Net: NetName=NetAMS1117-3.3_1 Pin=AMS1117-3.3-1
+Added Pin To Net: NetName=NetAMS1117-3.3_1 Pin=AMS1117-3.3-1
+Added Pin To Net: NetName=NetAMS1117-3.3_1 Pin=congtac-2
+Added Pin To Net: NetName=NetAMS1117-3.3_1 Pin=mini1-1
+Added Pin To Net: NetName=NetAMS1117-3.3_1 Pin=mini1-1
+Added Pin To Net: NetName=NetAMS1117-3.3_1 Pin=mini1-1
+Added Pin To Net: NetName=NetAMS1117-3.3_1 Pin=mini1-1
+Added Pin To Net: NetName=NetAMS1117-3.3_1 Pin=mini1-2
+Added Pin To Net: NetName=NetAMS1117-3.3_1 Pin=mini1-2
+Added Pin To Net: NetName=NetAMS1117-3.3_1 Pin=mini1-2
+Added Pin To Net: NetName=NetAMS1117-3.3_1 Pin=mini1-2
+Added Net: Name=NetAMS1117-3.3_1
+Added Pin To Net: NetName=NetAMS1117-3.3_2 Pin=AMS1117-3.3-2
+Added Pin To Net: NetName=NetAMS1117-3.3_2 Pin=AMS1117-3.3-2
+Added Pin To Net: NetName=NetAMS1117-3.3_2 Pin=BT1-1-
+Added Net: Name=NetAMS1117-3.3_2
+Added Member To Class: ClassName=Sheet1 Member=Component AMS1117-3.3

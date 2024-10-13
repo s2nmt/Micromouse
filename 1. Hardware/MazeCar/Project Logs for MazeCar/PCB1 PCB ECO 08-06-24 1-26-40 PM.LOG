@@ -1,0 +1,27 @@
+Removed Pin From Net: NetName=NetAMS1117-3.3_1 Pin=mini1-1
+Removed Pin From Net: NetName=NetAMS1117-3.3_1 Pin=mini1-1
+Removed Pin From Net: NetName=NetAMS1117-3.3_1 Pin=mini1-1
+Removed Pin From Net: NetName=NetAMS1117-3.3_1 Pin=mini1-1
+Removed Pin From Net: NetName=NetAMS1117-3.3_1 Pin=mini1-2
+Removed Pin From Net: NetName=NetAMS1117-3.3_1 Pin=mini1-2
+Removed Pin From Net: NetName=NetAMS1117-3.3_1 Pin=mini1-2
+Removed Pin From Net: NetName=NetAMS1117-3.3_1 Pin=mini1-2
+Removed Member From Class: ClassName=Sheet1 Member=mini1
+Added Component: Designator=mini560(mini540)
+Added Pin To Net: NetName=NetAMS1117-3.3_1 Pin=mini560-1
+Added Pin To Net: NetName=NetAMS1117-3.3_1 Pin=mini560-2
+Added Pin To Net: NetName=NetAMS1117-3.3_2 Pin=mini560-3
+Added Pin To Net: NetName=NetAMS1117-3.3_2 Pin=mini560-4
+Added Pin To Net: NetName=+5 Pin=mini560-5
+Added Pin To Net: NetName=+5 Pin=mini560-6
+Added Pin To Net: NetName=PGND Pin=mini560-7
+Added Pin To Net: NetName=PGND Pin=mini560-8
+Add Pin To Net: Unknown Pin: Pin TB1-9
+Add Pin To Net: Unknown Pin: Pin TB1-10
+Add Pin To Net: Unknown Pin: Pin TB1-11
+Add Pin To Net: Unknown Pin: Pin TB1-12
+Add Pin To Net: Unknown Pin: Pin TB1-13
+Add Pin To Net: Unknown Pin: Pin TB1-14
+Add Pin To Net: Unknown Pin: Pin TB1-15
+Add Pin To Net: Unknown Pin: Pin TB1-16
+Added Member To Class: ClassName=Sheet1 Member=Component mini560

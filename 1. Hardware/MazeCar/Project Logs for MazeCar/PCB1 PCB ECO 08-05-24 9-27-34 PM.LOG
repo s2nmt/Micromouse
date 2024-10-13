@@ -1,0 +1,12 @@
+Removed Pin From Net: NetName=SDA Pin=HD1-5
+Removed Pin From Net: NetName=SCL Pin=HD1-6
+Removed Pin From Net: NetName=GND Pin=HD1-7
+Removed Pin From Net: NetName=VCC Pin=HD1-8
+Removed Member From Class: ClassName=Sheet1 Member=HD1
+Added Component: Designator=*(MPU6050)
+Added Pin To Net: NetName=SDA Pin=*-5
+Added Pin To Net: NetName=SCL Pin=*-6
+Added Pin To Net: NetName=GND Pin=*-7
+Added Pin To Net: NetName=VCC Pin=*-8
+Added Member To Class: ClassName=Sheet1 Member=Component * MPU6050
+Added Member To Class: ClassName=Sheet1 Member=Component BT1 BK-18650-PC4

@@ -1,0 +1,28 @@
+Removed Pin From Net: NetName=SDA Pin=*1-5
+Removed Pin From Net: NetName=SCL Pin=*1-6
+Removed Pin From Net: NetName=GND Pin=*1-7
+Removed Pin From Net: NetName=VCC Pin=*1-8
+Added Pin To Net: NetName=NetAMS1_1 Pin=AMS1-1
+Added Pin To Net: NetName=NetAMS1_1 Pin=AMS1-1
+Added Pin To Net: NetName=VCC Pin=AMS1-2
+Added Pin To Net: NetName=VCC Pin=AMS1-2
+Added Pin To Net: NetName=NetAMS1_1 Pin=mini1-1
+Added Pin To Net: NetName=NetAMS1_1 Pin=mini1-1
+Added Pin To Net: NetName=NetAMS1_1 Pin=mini1-1
+Added Pin To Net: NetName=NetAMS1_1 Pin=mini1-1
+Added Pin To Net: NetName=NetAMS1_1 Pin=mini1-2
+Added Pin To Net: NetName=NetAMS1_1 Pin=mini1-2
+Added Pin To Net: NetName=NetAMS1_1 Pin=mini1-2
+Added Pin To Net: NetName=NetAMS1_1 Pin=mini1-2
+Add Pin To Net: Unknown Pin: Pin mini1-3
+Add Pin To Net: Unknown Pin: Pin mini1-3
+Add Pin To Net: Unknown Pin: Pin mini1-4
+Add Pin To Net: Unknown Pin: Pin mini1-4
+Add Pin To Net: Unknown Pin: Pin TB1-9
+Add Pin To Net: Unknown Pin: Pin TB1-10
+Add Pin To Net: Unknown Pin: Pin TB1-11
+Add Pin To Net: Unknown Pin: Pin TB1-12
+Add Pin To Net: Unknown Pin: Pin TB1-13
+Add Pin To Net: Unknown Pin: Pin TB1-14
+Add Pin To Net: Unknown Pin: Pin TB1-15
+Add Pin To Net: Unknown Pin: Pin TB1-16

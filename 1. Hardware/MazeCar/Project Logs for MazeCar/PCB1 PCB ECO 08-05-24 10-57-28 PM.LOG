@@ -1,0 +1,27 @@
+Added Pin To Net: NetName=NetAMS1_1 Pin=AMS1-1
+Added Pin To Net: NetName=NetAMS1_1 Pin=AMS1-1
+Added Pin To Net: NetName=VCC Pin=AMS1-2
+Added Pin To Net: NetName=VCC Pin=AMS1-2
+Added Pin To Net: NetName=NetAMS1_1 Pin=mini1-1
+Added Pin To Net: NetName=NetAMS1_1 Pin=mini1-1
+Added Pin To Net: NetName=NetAMS1_1 Pin=mini1-1
+Added Pin To Net: NetName=NetAMS1_1 Pin=mini1-1
+Added Pin To Net: NetName=NetAMS1_1 Pin=mini1-2
+Added Pin To Net: NetName=NetAMS1_1 Pin=mini1-2
+Added Pin To Net: NetName=NetAMS1_1 Pin=mini1-2
+Added Pin To Net: NetName=NetAMS1_1 Pin=mini1-2
+Add Pin To Net: Unknown Pin: Pin mini1-3
+Add Pin To Net: Unknown Pin: Pin mini1-3
+Add Pin To Net: Unknown Pin: Pin mini1-4
+Add Pin To Net: Unknown Pin: Pin mini1-4
+Add Pin To Net: Unknown Pin: Pin TB1-9
+Add Pin To Net: Unknown Pin: Pin TB1-10
+Add Pin To Net: Unknown Pin: Pin TB1-11
+Add Pin To Net: Unknown Pin: Pin TB1-12
+Add Pin To Net: Unknown Pin: Pin TB1-13
+Add Pin To Net: Unknown Pin: Pin TB1-14
+Add Pin To Net: Unknown Pin: Pin TB1-15
+Add Pin To Net: Unknown Pin: Pin TB1-16
+Added Member To Class: ClassName=Sheet1 Member=Component J3 B2B-XH-A(LF)(SN)
+Added Member To Class: ClassName=Sheet1 Member=Component J4 B3B-XH-A_(LF)(SN)
+Added Member To Class: ClassName=Sheet1 Member=Component J6 B3B-XH-A_(LF)(SN)

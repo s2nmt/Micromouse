@@ -1,0 +1,38 @@
+Removed Pin From Net: NetName=TIM1_CH4 Pin=HD6-1
+Removed Pin From Net: NetName=AI2 Pin=HD6-2
+Removed Pin From Net: NetName=AI1 Pin=HD6-3
+Removed Pin From Net: NetName=STBY Pin=HD6-4
+Removed Pin From Net: NetName=BI1 Pin=HD6-5
+Removed Pin From Net: NetName=BI2 Pin=HD6-6
+Removed Pin From Net: NetName=TIM4_CH3 Pin=HD6-7
+Removed Pin From Net: NetName=GND Pin=HD6-8
+Removed Pin From Net: NetName=PGND Pin=HD7-1
+Removed Pin From Net: NetName=B01 Pin=HD7-2
+Removed Pin From Net: NetName=B02 Pin=HD7-3
+Removed Pin From Net: NetName=A02 Pin=HD7-4
+Removed Pin From Net: NetName=A01 Pin=HD7-5
+Removed Pin From Net: NetName=PGND Pin=HD7-6
+Removed Member From Class: ClassName=Sheet1 Member=HD6
+Removed Member From Class: ClassName=Sheet1 Member=HD7
+Added Pin To Net: NetName=PGND Pin=TB6612FNG-1
+Added Pin To Net: NetName=PGND Pin=TB6612FNG-1
+Added Pin To Net: NetName=B01 Pin=TB6612FNG-2
+Added Pin To Net: NetName=B01 Pin=TB6612FNG-2
+Added Pin To Net: NetName=B02 Pin=TB6612FNG-3
+Added Pin To Net: NetName=B02 Pin=TB6612FNG-3
+Added Pin To Net: NetName=A02 Pin=TB6612FNG-4
+Added Pin To Net: NetName=A02 Pin=TB6612FNG-4
+Added Pin To Net: NetName=A01 Pin=TB6612FNG-5
+Added Pin To Net: NetName=A01 Pin=TB6612FNG-5
+Added Pin To Net: NetName=PGND Pin=TB6612FNG-6
+Added Pin To Net: NetName=PGND Pin=TB6612FNG-6
+Added Pin To Net: NetName=+5 Pin=TB6612FNG-8
+Added Pin To Net: NetName=+5 Pin=TB6612FNG-8
+Add Pin To Net: Unknown Pin: Pin TB6612FNG-9
+Add Pin To Net: Unknown Pin: Pin TB6612FNG-10
+Add Pin To Net: Unknown Pin: Pin TB6612FNG-11
+Add Pin To Net: Unknown Pin: Pin TB6612FNG-12
+Add Pin To Net: Unknown Pin: Pin TB6612FNG-13
+Add Pin To Net: Unknown Pin: Pin TB6612FNG-14
+Add Pin To Net: Unknown Pin: Pin TB6612FNG-15
+Add Pin To Net: Unknown Pin: Pin TB6612FNG-16

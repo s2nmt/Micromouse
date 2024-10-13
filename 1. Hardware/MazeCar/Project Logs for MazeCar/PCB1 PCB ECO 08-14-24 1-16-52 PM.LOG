@@ -1,0 +1,27 @@
+Removed Pin From Net: NetName=NetAMS1_1 Pin=AMS1-1
+Removed Pin From Net: NetName=VCC Pin=AMS1-3
+Removed Pin From Net: NetName=GND Pin=AMS1-4
+Removed Pin From Net: NetName=NetBT1_1+ Pin=congtac1-1
+Added Component: Designator=J8(Header_Duc Cong_3P 2.54)
+Add component (AddParameter): Name = "Chung_Loai"; Value = "C?m"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Don_Vi"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ghi_Chu"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Kieu_Chan"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ma_Hang"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Ten_Linh_Kien"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=NetBT1_1+ Pin=congtac1-2
+Added Pin To Net: NetName=NetAMS1_1 Pin=J8-1
+Added Pin To Net: NetName=VCC Pin=J8-2
+Change Net Name : Old Net Name=NetAMS1_1 New Net Name=NetD1_2
+Added Pin To Net: NetName=NetBT1_1- Pin=BT1-1-
+Added Pin To Net: NetName=NetBT1_1- Pin=BT1-2+
+Added Net: Name=NetBT1_1-
+Added Pin To Net: NetName=NetBT1_2- Pin=BT1-2-
+Added Pin To Net: NetName=NetBT1_2- Pin=J8-3
+Added Pin To Net: NetName=NetBT1_2- Pin=mini1-1
+Added Pin To Net: NetName=NetBT1_2- Pin=mini1-2
+Added Net: Name=NetBT1_2-
+Added Pin To Net: NetName=Netcongtac1_3 Pin=congtac1-3
+Added Pin To Net: NetName=Netcongtac1_3 Pin=D1-1
+Added Net: Name=Netcongtac1_3
+Added Member To Class: ClassName=Sheet1 Member=Component J8 Header 1_2.54_3P

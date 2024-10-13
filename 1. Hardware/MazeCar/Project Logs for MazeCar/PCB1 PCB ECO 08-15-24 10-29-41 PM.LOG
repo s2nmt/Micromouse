@@ -1,0 +1,14 @@
+Removed Pin From Net: NetName=TIM2_CH2 Pin=J2-2
+Removed Member From Class: ClassName=Sheet1 Member=J2
+Added Component: Designator=J?(JST_B2B-XH-A(LF)(SN))
+Add component (AddParameter): Name = "Check_prices"; Value = "https://www.snapeda.com/parts/B2B-XH-A(LF)(SN)/JST+Sales+America+Inc./view-part/?ref=eda"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "JST Sales America Inc."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "B2B-XH-A(LF)(SN)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/B2B-XH-A(LF)(SN)/JST+Sales+America+Inc./view-part/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Pin To Net: NetName=TIM2_CH2 Pin=J?-2
+Added Pin To Net: NetName=TIM2_CH1_1 Pin=J?-1
+Added Pin To Net: NetName=TIM2_CH1_1 Pin=U1-10
+Added Net: Name=TIM2_CH1_1
+Added Member To Class: ClassName=Sheet1 Member=Component J? B2B-XH-A(LF)(SN)

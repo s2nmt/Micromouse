@@ -1,0 +1,31 @@
+Removed Pin From Net: NetName=NetBT1_1+ Pin=HD2-1
+Removed Pin From Net: NetName=NetAMS1_1 Pin=HD2-2
+Removed Member From Class: ClassName=Sheet1 Member=HD2
+Added Component: Designator=congtac(congtac)
+Added Pin To Net: NetName=GND Pin=AMS1-1
+Added Pin To Net: NetName=GND Pin=AMS1-1
+Added Pin To Net: NetName=NetAMS1_2 Pin=AMS1-2
+Added Pin To Net: NetName=NetAMS1_2 Pin=AMS1-2
+Added Pin To Net: NetName=NetBT1_1+ Pin=congtac-1
+Added Pin To Net: NetName=NetAMS1_1 Pin=congtac-2
+Added Pin To Net: NetName=PGND Pin=mini1-1
+Added Pin To Net: NetName=PGND Pin=mini1-1
+Added Pin To Net: NetName=PGND Pin=mini1-1
+Added Pin To Net: NetName=PGND Pin=mini1-1
+Added Pin To Net: NetName=PGND Pin=mini1-2
+Added Pin To Net: NetName=PGND Pin=mini1-2
+Added Pin To Net: NetName=PGND Pin=mini1-2
+Added Pin To Net: NetName=PGND Pin=mini1-2
+Add Pin To Net: Unknown Pin: Pin mini1-3
+Add Pin To Net: Unknown Pin: Pin mini1-3
+Add Pin To Net: Unknown Pin: Pin mini1-4
+Add Pin To Net: Unknown Pin: Pin mini1-4
+Add Pin To Net: Unknown Pin: Pin TB1-9
+Add Pin To Net: Unknown Pin: Pin TB1-10
+Add Pin To Net: Unknown Pin: Pin TB1-11
+Add Pin To Net: Unknown Pin: Pin TB1-12
+Add Pin To Net: Unknown Pin: Pin TB1-13
+Add Pin To Net: Unknown Pin: Pin TB1-14
+Add Pin To Net: Unknown Pin: Pin TB1-15
+Add Pin To Net: Unknown Pin: Pin TB1-16
+Added Member To Class: ClassName=Sheet1 Member=Component congtac

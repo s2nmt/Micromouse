@@ -1,0 +1,29 @@
+Change Component Designator: OldDesignator=U? NewDesignator=U1
+Change Component Designator: OldDesignator=U? NewDesignator=U2
+Added Component: Designator=HD1(Header_8)
+Add component (AddParameter): Name = "Creat by"; Value = "VanDungEvn@Gmail.com"; VariantName = "[No Variations]"
+Added Component: Designator=HD2(Header_2)
+Add component (AddParameter): Name = "Value"; Value = "Header 2"; VariantName = "[No Variations]"
+Added Component: Designator=HD3(Header_2)
+Add component (AddParameter): Name = "Value"; Value = "Header 2"; VariantName = "[No Variations]"
+Added Component: Designator=HD4(Header_2)
+Add component (AddParameter): Name = "Value"; Value = "Header 2"; VariantName = "[No Variations]"
+Added Component: Designator=HD5(Header_2)
+Add component (AddParameter): Name = "Value"; Value = "Header 2"; VariantName = "[No Variations]"
+Added Component: Designator=HD6(Header_8)
+Add component (AddParameter): Name = "Creat by"; Value = "VanDungEvn@Gmail.com"; VariantName = "[No Variations]"
+Added Component: Designator=J1(JST_B2B-XH-A(LF)(SN))
+Add component (AddParameter): Name = "Check_prices"; Value = "https://www.snapeda.com/parts/B2B-XH-A(LF)(SN)/JST+Sales+America+Inc./view-part/?ref=eda"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "JST Sales America Inc."; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "B2B-XH-A(LF)(SN)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/B2B-XH-A(LF)(SN)/JST+Sales+America+Inc./view-part/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Member To Class: ClassName=Sheet1 Member=Component HD1 HD8
+Added Member To Class: ClassName=Sheet1 Member=Component HD2 Header 2
+Added Member To Class: ClassName=Sheet1 Member=Component HD3 Header 2
+Added Member To Class: ClassName=Sheet1 Member=Component HD4 Header 2
+Added Member To Class: ClassName=Sheet1 Member=Component HD5 Header 2
+Added Member To Class: ClassName=Sheet1 Member=Component HD6 HD8
+Added Member To Class: ClassName=Sheet1 Member=Component J1 B2B-XH-A(LF)(SN)
+Added Member To Class: ClassName=Sheet1 Member=Component U1 DM-OLED096-636

@@ -1,0 +1,8 @@
+../Core/Src/encoder.c:25:9:init_encoder	1
+../Core/Src/encoder.c:34:14:calculate_speed	1
+../Core/Src/encoder.c:40:6:HAL_TIM_IC_CaptureCallback	3
+../Core/Src/encoder.c:51:6:update_encoder	4
+../Core/Src/encoder.c:78:7:get_speed_enc	1
+../Core/Src/encoder.c:83:9:get_position_enc	1
+../Core/Src/encoder.c:88:6:reset_position_enc	1
+../Core/Src/encoder.c:93:6:print_info_enc	1
