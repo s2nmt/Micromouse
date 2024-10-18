@@ -36,6 +36,11 @@ typedef struct
     double KalmanAngleY;
 } MPU6050_t;
 
+typedef struct{
+	double Calibrate_X;
+	double Calibrate_Y;
+	double Calibrate_Z;
+}Calibrate_t;
 // Kalman structure
 typedef struct
 {
@@ -58,5 +63,7 @@ void MPU6050_Read_Temp(I2C_HandleTypeDef *I2Cx, MPU6050_t *DataStruct);
 void MPU6050_Read_All(I2C_HandleTypeDef *I2Cx, MPU6050_t *DataStruct);
 
 double Kalman_getAngle(Kalman_t *Kalman, double newAngle, double newRate, double dt);
+
+void calibrate(I2C_HandleTypeDef *I2Cx, uint16_t samples,Calibrate_t *filter);
 
 #endif /* INC_MPU6050_H_ */

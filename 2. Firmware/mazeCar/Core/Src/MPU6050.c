@@ -203,3 +203,20 @@ double Kalman_getAngle(Kalman_t *Kalman, double newAngle, double newRate, double
 
     return Kalman->angle;
 };
+
+void calibrate(I2C_HandleTypeDef *I2Cx, uint16_t samples,Calibrate_t *filter){
+
+	MPU6050_t Data;
+
+	for(uint16_t i = 0; i < samples; i++){
+		MPU6050_Read_Gyro(I2Cx, &Data);
+		filter->Calibrate_X += Data.Gx;
+		filter->Calibrate_Y += Data.Gy;
+		filter->Calibrate_Z += Data.Gz;
+		HAL_Delay(5);
+	}
+	filter->Calibrate_X = filter->Calibrate_X / samples;
+	filter->Calibrate_Y = filter->Calibrate_Y /samples;
+	filter->Calibrate_Z = filter->Calibrate_Z/samples;
+}
+

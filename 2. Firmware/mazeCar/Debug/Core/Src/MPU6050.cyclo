@@ -4,3 +4,4 @@
 ../Core/Src/MPU6050.c:110:6:MPU6050_Read_Temp	1
 ../Core/Src/MPU6050.c:123:6:MPU6050_Read_All	7
 ../Core/Src/MPU6050.c:177:8:Kalman_getAngle	1
+../Core/Src/MPU6050.c:207:6:calibrate	2

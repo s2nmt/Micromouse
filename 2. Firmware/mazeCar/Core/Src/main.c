@@ -73,8 +73,8 @@ double distance_right = 0;
 char Buffer[25] = {0};
 
 MPU6050_t MPU6050;
-
-double roll,pitch,yaw, froll, fpitch, fyaw = 0;
+Calibrate_t filter;
+double roll,pitch,yaw= 0;
 uint32_t elapsedTime, currentTime, previousTime;
 double dt = 0.001;
 
@@ -156,9 +156,9 @@ void angle(int goc){
 	while(1){
 		previousTime = HAL_GetTick();
 		MPU6050_Read_Gyro(&hi2c1, &MPU6050);
-		roll += (MPU6050.Gx - froll) *dt;
-		pitch += (MPU6050.Gy - fpitch) *dt;
-		yaw += (MPU6050.Gz - fyaw) *dt;
+		roll += (MPU6050.Gx - filter.Calibrate_X) *dt;
+		pitch += (MPU6050.Gy - filter.Calibrate_Y) *dt;
+		yaw += (MPU6050.Gz - filter.Calibrate_Z) *dt;
 
 		WheelPWM = PIDController_Update(&WheelPID, goc, abs(yaw));
 		__HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_4,abs(WheelPWM));
@@ -651,20 +651,14 @@ int main(void)
     HAL_TIM_Encoder_Start_IT(&htim3, TIM_CHANNEL_ALL);
     HAL_TIM_PWM_Start(&htim1, TIM_CHANNEL_4);
     HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_3);
-    forwardGPIO();
-	PIDController_Init(&leftWheelPID);
-	PIDController_Init(&forwardPID);
-	init_encoder(&enc_Left, LEFT_WHEEL);
-	init_encoder(&enc_Right, RIGHT_WHEEL);
 
+    HAL_GPIO_WritePin(LED_MCU_GPIO_Port, LED_MCU_Pin, SET);
+//    forwardGPIO();
+//	PIDController_Init(&leftWheelPID);
+//	PIDController_Init(&forwardPID);
+//	init_encoder(&enc_Left, LEFT_WHEEL);
+//	init_encoder(&enc_Right, RIGHT_WHEEL);
 
-//	while(1);
-//    while(1){
-//    	distance_left = distanceLeft();
-//    	distance_right = distanceRight();
-//    	distance_straight =  distanceStraight() ;
-//    }
-//    PIDController_Init(&WheelPID);
 	uint8_t timeout = 10;
 	while (MPU6050_Init(&hi2c1) == 1){
 		timeout--;
@@ -672,69 +666,23 @@ int main(void)
 			HAL_NVIC_SystemReset();
 		}
 	}
+	calibrate(&hi2c1,1000,&filter);
 
-	filter_gyro();
-//	API_turnLeft();
-//	API_turnRight();
-//	while(1){
-//		previousTime = HAL_GetTick();
-//		MPU6050_Read_Gyro(&hi2c1, &MPU6050);
-//		roll += (MPU6050.Gx - froll) *dt;
-//		pitch += (MPU6050.Gy - fpitch) *dt;
-//		yaw += (MPU6050.Gz - fyaw) *dt;
-//		currentTime = HAL_GetTick();
-//		elapsedTime = currentTime - previousTime;
-//		dt = ((double) elapsedTime) / 1000;
-//	}
-//    __HAL_TIM_SET_COUNTER(&htim3, 32767);
-//    __HAL_TIM_SET_COUNTER(&htim2, 32767);
-
-//	init_encoder(&enc_Left, LEFT_WHEEL);
-//	init_encoder(&enc_Right, RIGHT_WHEEL);
-
-//	PIDController_Init(&leftWheelPID);
-//	PIDController_Init(&rightWheelPID);
-//    PIDController_Init(&forwardPID);
-//	roll = 0;
-//	pitch = 0;
-//	yaw = 0;
-//	forwardGPIO();
 	while(1){
 		previousTime = HAL_GetTick();
 		MPU6050_Read_Gyro(&hi2c1, &MPU6050);
-		roll += (MPU6050.Gx - froll) *dt;
-		pitch += (MPU6050.Gy - fpitch) *dt;
-		yaw += (MPU6050.Gz - fyaw) *dt;
-
-		forwardPWM = PIDController_Update(&forwardPID, 0, abs(yaw));
-
-
-//		__HAL_TIM_SET_COMPARE(&htim1, TIM_CHANNEL_4,(uint16_t)abs(leftPWM));
-//		__HAL_TIM_SET_COMPARE(&htim4, TIM_CHANNEL_3,(uint16_t)abs(rightPWM));
+		roll += (MPU6050.Gx - filter.Calibrate_X) *dt;
+		pitch += (MPU6050.Gy - filter.Calibrate_Y) *dt;
+		yaw += (MPU6050.Gz - filter.Calibrate_Z) *dt;
 		currentTime = HAL_GetTick();
 		elapsedTime = currentTime - previousTime;
 		dt = ((double) elapsedTime) / 1000;
 	}
+
+
 	while(1){
 		HAL_Delay(40);
-//		distance_left = distanceLeft();
-//		distance_right = distanceRight();
-//		distance_straight =  distanceStraight();
-//		if(distance_straight < 10){
-//			if(distance_right > 10){
-//				API_turnRight();
-//				forwardGPIO();
-//			}
-//			else if (distance_left > 10){
-//				API_turnLeft();
-//				forwardGPIO();
-//			}
-//			else {
-//				API_turnLeft();
-//				API_turnLeft();
-//				forwardGPIO();
-//			}
-//		}
+
 		update_encoder(&enc_Left);
 		update_encoder(&enc_Right);
 		leftPWM = leftPWM + PIDController_Update(&leftWheelPID, -150, enc_Left.speed);
@@ -1293,27 +1241,27 @@ static void MX_GPIO_Init(void)
 }
 
 /* USER CODE BEGIN 4 */
-void filter_gyro(){
-	printf("Start probe filter\r\n");
-	HAL_Delay(500);
-	for(uint8_t x = 0; x < 10; x++){
-		printf("*");
-	    HAL_Delay(100);
-	}
-	printf("*\r\n");
-	for(int x = 0; x < 1000; x++){
-		MPU6050_Read_Gyro(&hi2c1, &MPU6050);
-		froll += MPU6050.Gx;
-		fpitch += MPU6050.Gy;
-		fyaw += MPU6050.Gz;
-	}
-	froll = froll / 1000;
-	fpitch = fpitch /1000;
-	fyaw = fyaw/1000;
-	printf("froll: %.2f fpitch: %.2f fyaw: %.2f\r\n",froll, fpitch, fyaw);
-	printf("Prove filter done!\r\n");
-
-}
+//void filter_gyro(){
+//	printf("Start probe filter\r\n");
+//	HAL_Delay(500);
+//	for(uint8_t x = 0; x < 10; x++){
+//		printf("*");
+//	    HAL_Delay(100);
+//	}
+//	printf("*\r\n");
+//	for(int x = 0; x < 1000; x++){
+//		MPU6050_Read_Gyro(&hi2c1, &MPU6050);
+//		froll += MPU6050.Gx;
+//		fpitch += MPU6050.Gy;
+//		fyaw += MPU6050.Gz;
+//	}
+//	froll = froll / 1000;
+//	fpitch = fpitch /1000;
+//	fyaw = fyaw/1000;
+//	printf("froll: %.2f fpitch: %.2f fyaw: %.2f\r\n",froll, fpitch, fyaw);
+//	printf("Prove filter done!\r\n");
+//
+//}
 /* USER CODE END 4 */
 
 /**
