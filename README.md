@@ -14,6 +14,8 @@ Hardware:
 - Motor Encoder
 - TB6612 driver
 - Distance sensor GP2Y0A41SK0F
+- Mini 560 5V
+- AMS1117 - 3.3V
 
 <p align="center">
   <img src="right.jpg" alt="Alt text" width="100%"/>
