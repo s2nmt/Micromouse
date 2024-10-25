@@ -21,6 +21,15 @@ Hardware:
   <img src="right.jpg" alt="Alt text" width="100%"/>
 </p>
 
+Firmware:
+- Uses PID control and Compass function with the MPU6050
+- Applied the Flood Fill Algorithm (DFS) to solve the maze.
+
+Case:
+- Design in SolidWorks with a base made from mica.
+Simulation:
+  implements Flood Fill Algorithm in C.
+  
 **Author** Minh Tuan
 
 **Date:** October 12, 2024
