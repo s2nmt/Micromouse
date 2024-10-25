@@ -8,10 +8,15 @@ This project is in the reseach phase and includes 4 component.
 3. Case
 4. Simulate micromouse
    
-Hardware: MCU STM32f103c8t6
+Hardware: 
+          MCU STM32f103c8t6
+         
           MPU 6050
+          
           Motor Encoder
+          
           TB6612 driver
+          
           Distance sensor GP2Y0A41SK0F
 
 <p align="center">
