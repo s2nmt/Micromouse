@@ -5,7 +5,7 @@ This is the source code and PCB layout for project micromouse. This using stm32f
 This project is in the reseach phase
 
 <p align="center">
-  <img src="right.jpg" alt="Alt text" width="60%"/>
+  <img src="right.jpg" alt="Alt text" width="100%"/>
 </p>
 
 **Author** Minh Tuan
