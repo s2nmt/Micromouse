@@ -7,6 +7,7 @@ This project is in the reseach phase and includes 4 component.
 2. Firmware
 3. Case
 4. Simulate micromouse
+   
 Hardware: MCU STM32f103c8t6
           MPU 6050
           Motor Encoder
