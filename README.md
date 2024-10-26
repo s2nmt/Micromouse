@@ -27,8 +27,9 @@ Firmware:
 
 Case:
 - Design in SolidWorks with a base made from mica.
+  
 Simulation:
-  implements Flood Fill Algorithm in C.
+- Implements Flood Fill Algorithm in C.
   
 **Author** Minh Tuan
 
