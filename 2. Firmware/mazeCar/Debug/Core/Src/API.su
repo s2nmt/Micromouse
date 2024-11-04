@@ -1,5 +1,0 @@
-../Core/Src/API.c:18:6:forwardGPIO	8	static
-../Core/Src/API.c:26:6:API_moveForward	8	static
-../Core/Src/API.c:32:6:API_turnRight	8	static
-../Core/Src/API.c:43:6:API_turnLeft	8	static
-../Core/Src/API.c:52:6:stop	8	static

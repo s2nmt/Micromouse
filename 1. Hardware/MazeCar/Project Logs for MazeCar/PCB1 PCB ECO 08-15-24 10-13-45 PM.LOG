@@ -1,4 +1,0 @@
-Removed Pin From Net: NetName=UART1_TX Pin=HD1-2
-Removed Pin From Net: NetName=UART1_RX Pin=HD1-3
-Added Pin To Net: NetName=UART1_RX Pin=HD1-2
-Added Pin To Net: NetName=UART1_TX Pin=HD1-3

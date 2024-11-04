@@ -1,4 +1,0 @@
-Added Component: Designator=HD?(Header_4)
-Add component (AddParameter): Name = "Value"; Value = "Header 4"; VariantName = "[No Variations]"
-Added Member To Class: ClassName=Sheet1 Member=Component HD? Header 4
-Added Member To Class: ClassName=Sheet1 Member=Component U2 STM32F103C8T6

@@ -1,6 +1,0 @@
-Removed Pin From Net: NetName=VCC Pin=HD7-7
-Removed Pin From Net: NetName=+5 Pin=HD7-8
-Added Component: Designator=TB6612FNG(TB6612PNG)
-Added Pin To Net: NetName=VCC Pin=TB6612FNG-7
-Added Pin To Net: NetName=VCC Pin=TB6612FNG-7
-Added Member To Class: ClassName=Sheet1 Member=Component TB6612FNG
