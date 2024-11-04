@@ -36,6 +36,7 @@ const int dy[] = {0, 0, -1, 1};
 
 wall_maze maze;
 Queue myQueue;
+
 void check_and_fill(int arr[ROW][COL],int row,int col,int value)
 {
     if(row<0 ||col<0||row>=16||col>=16||arr[row][col]!=-1)return;
@@ -44,7 +45,6 @@ void check_and_fill(int arr[ROW][COL],int row,int col,int value)
     pushQueue(&myQueue,point);
     arr[row][col]=value;
 }
-
 
 void init_flood(int arr[ROW][COL],int row,int col)
 {
@@ -92,15 +92,12 @@ void update_wall_debug(int (* arr)[ROW][COL])
 {
     char dir;
     bool clear_=0;
-    int count_=0;
     for(int i= 0;i<16;i++)
     {
         for(int j = 0;j<16;j++)
         {
             char value[20];
             intToStr((*arr)[i][j], value);
-            count_ ++;
-            printf("counter: %d value: %s\n",count_, value);
             for(int k = 0;k<4;k++)
             {
                 clear_=maze.cells[i][j].walls[k];
@@ -269,8 +266,6 @@ coord get_min_neighbour(cell_info cell_wall,coord cur, int (*arr)[ROW][COL],bool
         ind=dir;
         bool check_=cell_wall.walls[dir];
         if(change_)check_=check_wall_angle(cell_wall,&ind);
-        fprintf(stderr, "%d", check_);
-        fflush(stderr);
 
         if(isValid(newRow,newCol) && !check_)
         { 
@@ -298,6 +293,7 @@ void flood(Stack *stack_flood,int (*arr)[ROW][COL])
     {
 
         cur_stack=peekStack(stack_flood);
+        log_out("Pop stack");
         popStack(stack_flood); 
         int min_neightbor=255;
         bool check_;
@@ -319,6 +315,7 @@ void flood(Stack *stack_flood,int (*arr)[ROW][COL])
                 if(isValid(cur_add.row,cur_add.col) &&(*arr)[cur_add.row][cur_add.col]!=0&&!check_)
                 {
                     pushStack(stack_flood,cur_add);
+                    log_out("Push Stack");
                 }
             }
             if((*arr)[cur_stack.row][cur_stack.col]!=0)(*arr)[cur_stack.row][cur_stack.col]=min_neightbor+1;
@@ -335,7 +332,6 @@ void flood(Stack *stack_flood,int (*arr)[ROW][COL])
             return;
         }
     }
-
 }
 coord floodfill(coord start,coord dest,int (*arr)[ROW][COL],int *angle_now)
 {
@@ -361,9 +357,6 @@ coord floodfill(coord start,coord dest,int (*arr)[ROW][COL],int *angle_now)
             cur = peekQueue(&path_queue);
 
             new_cell=update_walls(*angle_now,cur.row,cur.col);
-            // fprintf(stderr, "new_cell: %d%d%d\n",*angle_now, cur.row,cur.col);
-
-            // fflush(stderr);
 
             if((*arr)[cur.row][cur.col]==(*arr)[dest.row][dest.col]){
                 log_out("find dest");
@@ -406,6 +399,7 @@ void init_flood_start(int (*arr)[ROW][COL],int row_,int col_,int back_)
            
         }
     }
+   
     if(back_!=1)
     {
         coord point2={row_+1,col_,count_};
@@ -421,20 +415,21 @@ void init_flood_start(int (*arr)[ROW][COL],int row_,int col_,int back_)
     coord point={row_,col_,count_};
     pushQueue(&myQueue,point);
     (*arr)[row_][col_]=0;
+    
     while(!isEmptyQueue(&myQueue))
     {
         coord frontCoord = peekQueue(&myQueue); 
         popQueue(&myQueue); 
-          for (int i = 0; i < 4; ++i) {
-                int newRow = frontCoord.row + dy[i]; // 0 0 -1 1
-                int newCol = frontCoord.col + dx[i]; //1 -1 0 0 
-                bool check_=maze.cells[frontCoord.row][frontCoord.col].walls[i];
-                if(!check_)check_and_fill(*arr,newRow,newCol,frontCoord.value);
-          }
-          if(sizeQueue(&myQueue)>120){
+        for (int i = 0; i < 4; ++i) {
+            int newRow = frontCoord.row + dy[i]; // 0 0 -1 1
+            int newCol = frontCoord.col + dx[i]; //1 -1 0 0 
+            bool check_=maze.cells[frontCoord.row][frontCoord.col].walls[i];
+            if(!check_)check_and_fill(*arr,newRow,newCol,frontCoord.value);
+        }
+        if(sizeQueue(&myQueue)>120){
             log_out("fulllll");
             break;
-          }
+        }
     } 
 }
 void shorted_path_go(int (*arr)[ROW][COL],int angle_now,coord start,coord dest)
@@ -450,34 +445,33 @@ void shorted_path_go(int (*arr)[ROW][COL],int angle_now,coord start,coord dest)
     // int angle=angle_now;
     for(int i=0;i<(*arr)[start.row][start.col];i++)
     {
-            int next_dir=-1;
-            int newRow;
-            int newCol;
-            for (int dir = 0; dir < 4; ++dir) {
-                newRow = cur.row + dy[dir]; // 0 0 -1 1
-                newCol = cur.col + dx[dir]; //1 -1 0 0 
-                bool check_=maze.cells[cur.row][cur.col].walls[dir];
-                if(isValid(newRow,newCol) && !check_)
-                {
-                    if((*arr)[newRow][newCol]<(*arr)[cur.row][cur.col])
-                    { 
-                        next_dir=dir;
-                        save_row=newRow;
-                        save_col=newCol;
-                    }
+        int next_dir=-1;
+        int newRow;
+        int newCol;
+        for (int dir = 0; dir < 4; ++dir) {
+            newRow = cur.row + dy[dir]; // 0 0 -1 1
+            newCol = cur.col + dx[dir]; //1 -1 0 0 
+            bool check_=maze.cells[cur.row][cur.col].walls[dir];
+            if(isValid(newRow,newCol) && !check_)
+            {
+                if((*arr)[newRow][newCol]<(*arr)[cur.row][cur.col])
+                { 
+                    next_dir=dir;
+                    save_row=newRow;
+                    save_col=newCol;
                 }
             }
-            if(next_dir!=-1)
-            {
-                cur.row=save_row;
-                cur.col=save_col;
-                pushQueueInt(&next_dir_path,next_dir);
-                // next_dir_path.push(next_dir);
-                char value[20];
-                intToStr((*arr)[save_row][save_col], value);
-                API_setColor(save_row,save_col,'g');
-                API_setText(save_row,save_col,value);
-            }
+        }
+        if(next_dir!=-1)
+        {
+            cur.row=save_row;
+            cur.col=save_col;
+            pushQueueInt(&next_dir_path,next_dir);
+            char value[20];
+            intToStr((*arr)[save_row][save_col], value);
+            API_setColor(save_row,save_col,'g');
+            API_setText(save_row,save_col,value);
+        }
     }
 }
 int main(int argc, char* argv[]) {
@@ -503,11 +497,15 @@ int main(int argc, char* argv[]) {
     int angle_now=90;
     coord new_coord;
     new_coord = floodfill(start,dest,&arr,&angle_now);
-    // update_wall_debug(&arr);
-    // init_flood_start(&arr,0,0,1);
-    // log_out("done2");
-    // new_coord=floodfill(new_coord,start,&arr,&angle_now);
-    // init_flood_start(&arr,7,7,2);
+    update_wall_debug(&arr);
+    init_flood_start(&arr,0,0,1);
+    update_wall_debug(&arr);
+    log_out("done2");
+    new_coord=floodfill(new_coord,start,&arr,&angle_now);
+    update_wall_debug(&arr);
+    init_flood_start(&arr,7,7,2);
+    update_wall_debug(&arr);
     // shorted_path_go(&arr,angle_now,new_coord,dest);
+    floodfill(start,dest,&arr,&angle_now);
     return 0;
 }
