@@ -18,7 +18,7 @@ Hardware:
 - AMS1117 - 3.3V
 
 <p align="center">
-  <img src="right.jpg" alt="Alt text" width="100%"/>
+  <img src="case.jpg" alt="Alt text" width="100%"/>
 </p>
 
 Firmware:
