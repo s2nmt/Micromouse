@@ -32,8 +32,6 @@ void init_arr(int arr[ROW][COL], int row, int col) {
 wall_maze maze;
 Queue myQueue;
 
-
-
 void update_wall_debug(int (* arr)[ROW][COL])
 {
     char dir;
