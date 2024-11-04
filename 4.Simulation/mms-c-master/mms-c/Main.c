@@ -293,7 +293,7 @@ void flood(Stack *stack_flood,int (*arr)[ROW][COL])
     {
 
         cur_stack=peekStack(stack_flood);
-        log_out("Pop stack");
+        // log_out("Pop stack");
         popStack(stack_flood); 
         int min_neightbor=255;
         bool check_;
@@ -315,7 +315,7 @@ void flood(Stack *stack_flood,int (*arr)[ROW][COL])
                 if(isValid(cur_add.row,cur_add.col) &&(*arr)[cur_add.row][cur_add.col]!=0&&!check_)
                 {
                     pushStack(stack_flood,cur_add);
-                    log_out("Push Stack");
+                    // log_out("Push Stack");
                 }
             }
             if((*arr)[cur_stack.row][cur_stack.col]!=0)(*arr)[cur_stack.row][cur_stack.col]=min_neightbor+1;
@@ -497,7 +497,7 @@ int main(int argc, char* argv[]) {
     int angle_now=90;
     coord new_coord;
     new_coord = floodfill(start,dest,&arr,&angle_now);
-    update_wall_debug(&arr);
+    // update_wall_debug(&arr);
     init_flood_start(&arr,0,0,1);
     update_wall_debug(&arr);
     log_out("done2");
@@ -505,7 +505,7 @@ int main(int argc, char* argv[]) {
     update_wall_debug(&arr);
     init_flood_start(&arr,7,7,2);
     update_wall_debug(&arr);
-    // shorted_path_go(&arr,angle_now,new_coord,dest);
+    shorted_path_go(&arr,angle_now,new_coord,dest);
     floodfill(start,dest,&arr,&angle_now);
     return 0;
 }

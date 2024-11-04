@@ -119,6 +119,21 @@ void init_maze()
         }
     }
 }
+cell_info update_walls(int angle_now,int row,int col)
+{
+    cell_info new_cell;
+    new_cell.angle_update=angle_now;
+    new_cell.walls[UP]=API_wallFront();
+    new_cell.walls[DOWN]=0;
+    new_cell.walls[LEFT]=API_wallLeft();
+    new_cell.walls[RIGHT]=API_wallRight();
+    new_cell.dead=0;
+    new_cell.visited=1;
+    return new_cell;
+}
+void floodfill(coord start,coord dest,int (*arr)[ROW][COL],int *angle_now){
+    cell_info new_cell;
+}
 int main(int argc, char* argv[]) {
     log_out("Running...");
     initializeQueue(&myQueue);
@@ -137,20 +152,5 @@ int main(int argc, char* argv[]) {
     update_wall_debug(&arr);
     int angle_now=90;
     coord new_coord;
-    log_out(intToStrver(API_wallFront()));
-    log_out(intToStrver(API_wallLeft()));
-    log_out(intToStrver(API_wallRight()));
-
-    API_moveForward();
-    log_out(intToStrver(API_wallFront()));
-    log_out(intToStrver(API_wallLeft()));
-    log_out(intToStrver(API_wallRight()));
-    API_moveForward();
-    log_out(intToStrver(API_wallFront()));
-    log_out(intToStrver(API_wallLeft()));
-    log_out(intToStrver(API_wallRight()));
-    API_turnRight();
-    log_out(intToStrver(API_wallFront()));
-    log_out(intToStrver(API_wallLeft()));
-    log_out(intToStrver(API_wallRight()));
+    floodfill(start,dest,&arr,&angle_now);
 }
