@@ -31,6 +31,9 @@ Case:
 Simulation:
 - Implements Flood Fill Algorithm in C.
   
+<p align="center">
+  <img src="image.png" alt="Alt text" width="100%"/>
+</p>
 **Author** Minh Tuan
 
 **Date:** October 12, 2024
